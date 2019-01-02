@@ -1,0 +1,30 @@
+<%
+    var city=data[1]["name"];
+    var country=data[1]["sys"]["country"];
+    var weather=data[1]["weather"][0]["description"];
+    var weatherIconUrl="http://openweathermap.org/img/w/"+ data[1]["weather"][0]["icon"] + ".png";
+    var temp=Number(data[1]["main"]["temp"])-273.15;
+    var temp_min=data[1]["main"]["temp_min"]-273.15;
+    var temp_max=data[1]["main"]["temp_max"]-273.15;
+    var wind_speed=data[1]["wind"]["speed"];
+    var pressure=data[1]["main"]["pressure"];
+    var sunrise=convertUnixTime(data[1]["sys"]["sunrise"]);
+    var sunset=convertUnixTime(data[1]["sys"]["sunset"]);
+    
+    function convertUnixTime(unixTime){
+    	var date = new Date(unixTime*1000);
+    	var hours = date.getHours();
+    	var minutes = "0" + date.getMinutes();
+    	var seconds = "0" + date.getSeconds();
+    
+    	var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2) + ' (UTC)';
+    	return formattedTime;
+    }
+%>
+<li><img width="40px" height="40px" src="/img/city-icon.png" alt=""><%= city %> (<%= country %>)</li>
+<li><img width="40px" height="40px" src="http://openweathermap.org/img/w/10d.png" alt=""><%= weather %></li>
+<li><img width="40px" height="40px" src="/img/temperature_max-icon.png" alt=""><%= temp.toFixed(2) %>&deg;C (<%= temp_min.toFixed(2) %>&deg;C ~ <%= temp_max.toFixed(2) %>&deg;C)</li>
+<li><img width="40px" height="40px" src="/img/wind-icon.png" alt=""><%= wind_speed %> meter/sec</li>
+<li><img width="40px" height="40px" src="/img/pressure-icon.png" alt=""><%= pressure %> hPa</li>
+<li><img width="40px" height="40px" src="/img/sunrise-icon.png" alt=""><%= sunrise %></li>
+<li><img width="40px" height="40px" src="/img/sunset-icon.png" alt=""><%= sunset %></li>

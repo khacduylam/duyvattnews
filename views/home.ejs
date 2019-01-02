@@ -1,0 +1,44 @@
+<% include partials/header.ejs %>
+
+	<title>Weather Today</title>
+</head>
+<body>
+	<!--container-->
+	<div class="container">
+		<!-- left -->
+		<div id="left" class="main">
+			<!-- navbar -->
+			<div id="navbar" class="main">
+				<!--<form action="/" method="POST">-->
+				<input type="text" name="city" placeholder="City(eg: London, Saigon)" id="search-input">
+				<input type="button" id="search-button" name="search" value="Search">
+				<!--</form>-->
+				<i>&nbsp;&nbsp;&nbsp;Search for weather in your city...</i>
+			</div>
+			<!-- end navbar -->
+			<!-- weather -->
+			<div id="weather" class="main">
+				<div class="main" id="weather-head">
+					<h3>Today Weather</h3>
+					<ul id="weather-content">
+						<% include partials/weather.ejs %>
+					</ul>
+				</div>
+			</div>
+			<!-- end weather -->
+		</div>
+		<!-- end left -->
+		<!-- right -->
+		<div id="right" class="main">
+			<h3 id="news-head"><a id="home"><img src="/img/back-icon.png" alt=""></a>&nbsp;&nbsp;Daily News in The World
+				
+			</h3>
+			<div id="news-box">
+				<% include partials/news.ejs %>
+			</div>
+		</div>
+		<!-- end right -->
+	</div>
+	<!--end container-->
+	<!-- footer -->
+<% include partials/footer.ejs %>

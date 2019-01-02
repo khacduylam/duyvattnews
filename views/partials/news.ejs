@@ -1,0 +1,12 @@
+<% if(data[0]!="underfied" && data[0]!=0){ %>
+    <% var img='https:/'+'/cdn1.theweek.co.uk/sites/theweek/files/styles/16x8_465/public/2015/07/150708-roswell.jpg?itok=5nNH3GYO' %>
+    <ul id="news-content">
+    <% data[0]["articles"].forEach(function(news){ %>
+        <li>
+            <img width="45px" height="45px" border-radius="5px" src="<%= news["urlToImage"]!=null?news["urlToImage"]:img %>">
+            <a id="<%= news["url"] %>" class="news-link"><%= news["title"] %> (<%= news["publishedAt"] %>)</a><br>
+            <i>__<%= news["author"]!=null && news["author"]!=''?news["author"]:"public" %>__</i>
+        </li><hr>
+    <% }); %>
+    </ul>
+<% } %>

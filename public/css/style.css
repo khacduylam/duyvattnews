@@ -1,0 +1,132 @@
+body{
+	background-image: url('../img/background-img.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: 'Mukta', sans-serif;
+}
+
+.container{
+	width: 80%;
+	height: 500px;
+	margin-top: 50px;
+}
+
+.main{
+	border-radius: 8px;
+	box-shadow: 8px 8px 8px black;
+	background-color: #ffffff;
+}
+
+#left{
+	width: 30%;
+	height: 100%;
+	float: left;
+	background: #fff;
+}
+
+#navbar{
+	width: 100%;
+	height: 20%;
+	float: top;
+	margin-top: 5%;
+	background: #e0ebeb;
+}
+
+#search-input{
+	width: 70%;
+	height: 35px;
+	margin-left: 2%;
+	margin-top: 25px;
+}
+
+#search-button{
+	width: 23%;
+	height: 35px;
+	margin-left: 2%;
+	border-radius: 5px;
+}
+
+#weather{
+	width: 100%;
+	height: 70%;
+	margin-top: 5%;
+	background-image: url('../img/weather-img.jpg');
+	background-size: cover;
+}
+
+#weather-head{
+	width: 100%;
+	height: 30px;
+	background: #001a1a;
+	text-align: center;
+	color: #fff;
+}
+
+#weather-content{
+	text-align: left;
+	font-size: 1.3em;
+	color: #000099;
+	margin-top: 20px;
+}
+
+#right{
+	width: 68%;
+	height: 100%;
+	float: right;
+}
+
+#news-head{
+	padding-left: 20px;
+	font-weight: bold;
+	background-color: #000;
+	color: #fff;
+	position: absolute;
+	width: 40%;
+	border-top-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+#home{
+	background-color: #fff;
+	border-radius: 4px;
+}
+
+#home:hover{
+	cursor: pointer;
+}
+
+#news-box{
+	width: 100%;
+	height: 100%;
+	padding-top: 7%;
+}
+
+#news-content{
+	font-size: 1.2em;
+	background-image: url('../img/news-img.jpg');
+	background-size: cover;
+	list-style-type: none;
+}
+
+#news-content li a:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+#news-content li a{
+	color: #0000b3;
+}
+
+#footer{
+	width: 80%;
+	height: 80px;
+	margin: 50px auto;
+	background-color: #001a00;
+	text-align: center;
+	color: #fff;
+	padding-top: 8px;
+}
+
+#footer ul{
+	list-style-type: none;
+}

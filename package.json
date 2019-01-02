@@ -1,0 +1,21 @@
+{
+  "name": "todaynews",
+  "version": "1.0.0",
+  "description": "A news app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Khac Duy Lam",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "dotenv": "^6.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "newsapi": "^2.4.0",
+    "request": "^2.88.0"
+  }
+}
